@@ -1,400 +1,174 @@
-#####################################################
-Why Should a developer or devops engineer learn linux
-#####################################################
--> Linux is the backbone of modern IT infrastructure, and learning it provides a competitive edge for developers and DevOps engineers.
--> Most Servers Run on Linux
--> Popular DevOps tools like Docker, Kubernetes, Ansible, Terraform, and Jenkins run seamlessly on Linux.
--> Major cloud providers (AWS, Azure, GCP) extensively use Linux-based VMs and services
--> Linux Servers are highly Secure
--> Performance 
-
-############################
-Linux Operating System (OS)
-############################
-
--> Linux is a community-driven OS, not owned by any single company.
-
--> Linux is free and open-source, allowing customization and flexibility.
-
--> Linux is highly secure, eliminating the need for antivirus software.
-
--> Linux is primarily CLI-based (Command Line Interface), offering powerful control over the system.
-
--> Linux is widely used in businesses for efficient server management and enterprise solutions.
-
-############################
-Linux History
-############################
-
--> Linux OS was developed by Linus Torvalds.
-
--> Linus Torvalds identified several limitations and challenges in the Unix OS.
-
--> He discovered an OS that aligned with his vision, known as Minix OS.
-
--> Using Minix OS as a reference, he modified its code and introduced a new operating system—Linux OS.
-
--> The name Linux comes from: (Li)nus + Mi(nux) = Linux.
-
-#############################
-Linux Distributions
-#############################
-
-​Linus Torvalds made the Linux OS source code freely available to the public. Various companies and communities have since modified this source code to meet their specific requirements, releasing their own versions known as Linux distributions or flavors. As of now, there are over 600 active Linux distributions in the market. ​
-TrueList
-
-Examples include:
-
-a. Amazon Linux​
-b. Ubuntu​
-c. Red Hat​
-d. Debian​
-e. Kali​
-f. Fedora​
-
-Each of these distributions offers unique features and caters to different user needs, contributing to the rich diversity of the Linux ecosystem.
-
-###############################
-How to setup Linux Machine ?
-###############################
-
-Approach 1: Install Linux OS Directly on Your System
-1. Download a Linux distribution (e.g., Ubuntu, Fedora, Debian).
-2. Create a bootable USB drive and install it as the primary OS.
-
-Approach 2: Use VirtualBox to Run Linux as a Virtual Machine
-1. Install Oracle VirtualBox or VMware Workstation on your system.
-2. Create a new virtual machine and install Linux as a guest OS.
-
-Approach 3: Deploy a Free Linux VM on AWS Cloud
-1. Sign up for an AWS Free Tier account.
-Note: Youtube Video to create free AWS Account: https://youtu.be/KBb3-w6hyp0?si=Q3JGWwRKT4rLfeQI
-2. Launch an EC2 instance with a Linux-based AMI (Amazon Machine Image).
-3. Enjoy 750 free hours per month for up to 1 year under the free tier.
-
-
-#######################
-Linux Commands Mastery
-########################
-
-whoami → Displays the currently logged-in username.
-
-pwd → Shows the present working directory.
-
-date → Prints today’s date and time.
-
-cal → Displays the calendar for the current month.
-
-cal 2025 → Shows the calendar for the entire year 2025.
-
-clear → Clears the terminal screen.
-
-mkdir : Create a new directory (folder)  
-        mkdir s3  
-        mkdir dev  
-        mkdir qa  
-
-rmdir : Remove an empty directory  
-        rmdir qa  
-
-rm -rf <dir> : Delete a non-empty directory and its contents  
-        rm -rf devops  
-
-ls : List files and directories in the current working directory  
-
-ls -l : Display files in a detailed (long) format, sorted alphabetically  
-
-ls -lr : Show files in reverse alphabetical order  
-
-ls -lt : List files with the newest files at the top  
-
-ls -ltr : Show files with the oldest files at the top  
-
-ls -la : Display all files, including hidden ones  
-
-touch : Create empty files  
-        touch t1.txt  
-        touch t2.txt t3.txt  
-
-cd : Change directory  
-        cd dir-name  
-        cd ..  
-
-rm : Delete a file or directory  
-        rm t1.txt  
-        rm -rf <dir-name>  
-
-mv : Rename or move a file/directory  
-        mv existing-name new-name  
-        mv current-location new-location
-
-cat : Create a new file, append data, and display file content  
-
-        # Create a new file and add data  
-        cat > t1.txt  
-
-        # Append data to an existing file  
-        cat >> t1.txt  
-
-        # Display file content  
-        cat t1.txt  
-
-        # Display file content with line numbers  
-        cat -n t1.txt  
-
-tac : Display file content in reverse order (bottom to top)
-
-cp : Copy file content from one file to another  
-        cp t1.txt t2.txt  
-
-Note: To merge multiple files, use the cat command  
-        cat t1.txt t2.txt > t3.txt  
-
-head : Display the first 10 lines of a file (default)  
-        head t1.txt  
-        head -n 20 t1.txt  # Show first 20 lines  
-        head -n 50 t1.txt  # Show first 50 lines  
-
-tail : Display the last 10 lines of a file (default)  
-        tail t1.txt  
-        tail -n 25 t1.txt  # Show last 25 lines  
-
-Note: The `tail` command is commonly used to monitor real-time log updates. 
-
-
-grep : Stands for "Global Regular Expression Print"  
-
-Note: The `grep` command is used to search for specific content within a file.  
-
-        # Display lines containing the keyword "teen"  
-        grep 'hello' test.txt  
-
-        # Perform a case-insensitive search  
-        grep -i 'hello' test.txt  
-
-        # Show matching lines along with their line numbers  
-        grep -n 'hello' test.txt  
-
-        # Display lines that do NOT contain the keyword "hello"  
-        grep -v 'hello' test.txt  
-
-        # Search for "hello" in all files within the current directory  
-        grep 'hello' *  
-
-        # Combine `tail` with `grep`  
-        # Search for "hello" within the last 10 lines of a file  
-        tail test.txt | grep 'hello'  
-
-##############################################################################
-wc : Word count command to count lines, words, and characters in a file  
-##############################################################################
-
-        # Display line, word, and character count  
-        wc test.txt 
-
-        # Count only the number of lines  
-        wc -l test.txt 
-
-        # Count only the number of words  
-        wc -w test.txt 
-
-        # Count only the number of characters  
-        wc -c test.txt
-
-
-#########################
+Why Should a Developer or DevOps Engineer Learn Linux?
+Linux is a critical skill for developers and DevOps engineers, offering a competitive edge in today’s tech landscape. Below are the key reasons to master Linux:
+•	Backbone of IT Infrastructure: Linux powers the majority of modern servers, cloud platforms, and development environments.
+•	Dominance in Servers: Most web servers, application servers, and databases run on Linux due to its reliability and scalability.
+•	DevOps Tool Compatibility: Popular tools like Docker, Kubernetes, Ansible, Terraform, and Jenkins are designed to integrate seamlessly with Linux.
+•	Cloud Integration: Major cloud providers (AWS, Azure, GCP) rely heavily on Linux-based virtual machines (VMs) and services.
+•	Enhanced Security: Linux is inherently secure, reducing the need for third-party antivirus software.
+•	Performance: Linux offers superior performance for resource-intensive tasks, making it ideal for development and production environments.
+________________________________________
+Introduction to the Linux Operating System (OS)
+Linux is a powerful, open-source operating system with unique characteristics:
+•	Community-Driven: Not owned by a single company, Linux is developed and maintained by a global community.
+•	Free and Open-Source: Users can freely access, modify, and distribute its source code for customization.
+•	Highly Secure: Built-in security features minimize vulnerabilities and eliminate the need for antivirus tools.
+•	CLI-Based: The Command Line Interface (CLI) provides precise and powerful control over the system.
+•	Enterprise-Friendly: Widely adopted by businesses for efficient server management and scalable solutions.
+________________________________________
+A Brief History of Linux
+Linux has an inspiring origin story:
+•	Creator: Developed by Linus Torvalds in 1991.
+•	Motivation: Torvalds sought to overcome the limitations of Unix, a popular OS at the time.
+•	Inspiration: He based Linux on Minix, a lightweight Unix-like OS, modifying its code to suit his vision.
+•	Naming: The name "Linux" combines "Linus" and "Minix" (Li + nux = Linux).
+•	Open-Source Legacy: Torvalds released the source code to the public, sparking widespread adoption and innovation.
+________________________________________
+Linux Distributions (Distros)
+Linux’s open-source nature allows companies and communities to create tailored versions called distributions (distros). Examples include:
+•	Amazon Linux: Optimized for AWS environments.
+•	Ubuntu: User-friendly, widely used for desktops and servers.
+•	Red Hat: Enterprise-focused with robust support.
+•	Debian: Stable and versatile, ideal for developers.
+•	Kali: Designed for security researchers and penetration testers.
+•	Fedora: Cutting-edge, community-driven distro.
+Each distro offers unique features, catering to diverse needs within the Linux ecosystem.
+________________________________________
+How to Set Up a Linux Machine
+You can start using Linux through one of these three approaches:
+Approach 1: Install Linux Directly on Your System
+1.	Download a Linux distro (e.g., Ubuntu, Fedora, Debian).
+2.	Create a bootable USB drive using tools like Rufus or Etcher.
+3.	Boot from the USB and install Linux as your primary OS.
+Approach 2: Run Linux in a Virtual Machine (VM)
+1.	Install virtualization software like Oracle VirtualBox or VMware Workstation.
+2.	Create a new VM and allocate resources (CPU, RAM, storage).
+3.	Install your chosen Linux distro as a guest OS.
+Approach 3: Deploy a Free Linux VM on AWS
+1.	Sign up for an AWS Free Tier account. 
+o	Tutorial: YouTube - How to Create a Free AWS Account
+2.	Launch an EC2 instance using a Linux-based Amazon Machine Image (AMI).
+3.	Benefit from 750 free hours per month for up to 1 year.
+________________________________________
+Mastering Linux Commands
+Linux’s CLI is its powerhouse. Below are essential commands grouped by function:
+Basic System Commands
+•	whoami: Displays the current logged-in user.
+•	pwd: Shows the present working directory (e.g., /home/user).
+•	date: Prints the current date and time.
+•	cal: Displays the current month’s calendar.
+•	cal 2025: Shows the full calendar for 2025.
+•	clear: Clears the terminal screen.
+Directory Management
+•	mkdir <name>: Creates a new directory (e.g., mkdir s3).
+•	rmdir <name>: Removes an empty directory (e.g., rmdir qa).
+•	rm -rf <name>: Deletes a non-empty directory and its contents (e.g., rm -rf devops).
+•	cd <name>: Changes to a specified directory (e.g., cd s3).
+•	cd ..: Moves up one directory level.
+File Management
+•	touch <filename>: Creates an empty file (e.g., touch t1.txt).
+•	rm <filename>: Deletes a file (e.g., rm t1.txt).
+•	mv <source> <destination>: Moves or renames a file/directory (e.g., mv t1.txt t2.txt).
+•	cp <source> <destination>: Copies a file (e.g., cp t1.txt t2.txt).
+File Viewing and Editing
+•	cat > <filename>: Creates a file and adds data (press Ctrl+D to save).
+•	cat >> <filename>: Appends data to an existing file.
+•	cat <filename>: Displays file content (e.g., cat t1.txt).
+•	cat -n <filename>: Shows content with line numbers.
+•	tac <filename>: Displays content in reverse order (bottom to top).
+•	head <filename>: Shows the first 10 lines (default). 
+o	head -n 20 <filename>: Shows the first 20 lines.
+•	tail <filename>: Shows the last 10 lines (default). 
+o	tail -n 25 <filename>: Shows the last 25 lines.
+o	Use Case: Monitor real-time logs with tail.
+Searching and Filtering
+•	grep 'keyword' <filename>: Searches for a keyword (e.g., grep 'hello' test.txt). 
+o	-i: Case-insensitive search.
+o	-n: Shows line numbers with matches.
+o	-v: Displays lines without the keyword.
+o	grep 'hello' *: Searches all files in the current directory.
+o	tail test.txt | grep 'hello': Combines with tail for real-time filtering.
+File Statistics
+•	wc <filename>: Counts lines, words, and characters. 
+o	-l: Counts lines only.
+o	-w: Counts words only.
+o	-c: Counts characters only.
+________________________________________
 Text Editors in Linux
-#########################
+The vi Editor
+•	Overview: Default text editor in Linux, operates in three modes.
+•	Modes: 
+1.	Command Mode: Default mode when opening a file (vi <filename>).
+2.	Insert Mode: Press i to edit text.
+3.	Escape Mode: Press Esc to exit insert mode.
+•	Commands: 
+o	:wq: Save changes and exit.
+o	:q!: Exit without saving.
+Note: If the file doesn’t exist, vi creates it automatically.
+________________________________________
+File Creation and Reading Commands
+Creating Files
+•	touch <filename>: Creates an empty file.
+•	cat > <filename>: Creates a file with data.
+•	cp <source> <destination>: Copies content to a new file.
+•	vi <filename>: Creates and opens a file for editing.
+Reading Files
+•	cat <filename>: Displays content top to bottom.
+•	tac <filename>: Displays content bottom to top.
+•	head <filename>: Shows the first 10 lines.
+•	tail <filename>: Shows the last 10 lines.
+•	vi <filename>: Opens for viewing/editing.
+________________________________________
+The sed Command (Stream Editor)
+Overview
+•	Purpose: Processes text (substitute, delete, print, insert) without opening files.
+•	Power: A versatile tool for automation and scripting.
+Substituting Text
+•	sed 's/old/new/' <filename>: Replaces the first occurrence.
+•	sed 's/old/new/2' <filename>: Replaces the second occurrence.
+•	sed 's/old/new/g' <filename>: Replaces all occurrences.
+•	sed -i 's/old/new/g' <filename>: Saves changes to the file.
+Deleting Lines
+•	sed -i '1d' <filename>: Deletes the first line.
+•	sed -i '4d' <filename>: Deletes the fourth line.
+•	sed -i '$d' <filename>: Deletes the last line.
+•	sed -i '5,15d' <filename>: Deletes lines 5 to 15.
+Printing Lines
+•	sed -n '10,20p' <filename>: Prints lines 10 to 20.
+Inserting Text
+•	sed '2i\text' <filename>: Inserts "text" at line 2.
+•	sed '$a\text' <filename>: Appends "text" to the last line.
+________________________________________
+User Management in Linux
+Key Concepts
+•	Multi-User System: Supports multiple users working simultaneously.
+•	Default User: In Amazon Linux VMs, the default user is ec2-user with sudo privileges.
+•	Home Directories: Each user gets a home directory (e.g., /home/mike).
+Commands
+•	sudo useradd <username>: Creates a new user.
+•	sudo passwd <username>: Sets/updates a user’s password.
+•	cat /etc/passwd: Lists all users.
+•	su <username>: Switches to another user.
+•	cd ~: Navigates to the current user’s home directory.
+•	sudo userdel <username>: Deletes a user.
+•	sudo userdel --remove <username>: Deletes a user and their home directory.
+•	sudo usermod -l <new-name> <old-name>: Renames a user.
+
+Important Files
+•	/etc/passwd: Stores user information.
+•	/etc/shadow: Stores encrypted passwords.
+________________________________________
+Managing User Groups in Linux
+Why Use Groups?
+•	Efficiency: Assign permissions (read, write, execute) to a group instead of individual users.
+•	Example: A "developers" group can access code repositories, while "finance" accesses reports.
+Commands
+•	cat /etc/group: Lists all groups.
+•	sudo groupadd <group-name>: Creates a new group.
+•	sudo usermod -aG <group-name> <username>: Adds a user to a group.
+•	sudo gpasswd -d <username> <group-name>: Removes a user from a group.
+•	getent group <group-name>: Lists users in a group.
+•	id <username>: Shows a user’s groups.
+•	sudo groupdel <group-name>: Deletes a group.
+•	sudo groupmod -n <new-name> <old-name>: Renames a group.
+________________________________________
 
--> **vi (Visual Editor)** is the default text editor in Linux systems.  
-
--> Using the `vi` command, we can create new files and edit existing ones.  
-
--> The `vi` editor operates in **three modes**:  
-
-    1) **Command Mode** – Opens a file (default mode).  
-       Example: vi <filename>  
-
-    2) **Insert Mode** – Enables text editing.  
-       - Press **'i'** on the keyboard to enter insert mode.  
-
-    3) **Escape Mode** – Exits insert mode.  
-       - Press **'Esc'** on the keyboard to return to command mode.  
-
-    ## **Save changes and exit** → `:wq`  
-    ## **Exit without saving changes** → `:q!`  
-
-**Note:** If the specified file exists, `vi` will open it. If not, `vi` will create a new file and open it.
-
-#############################  
-File Creation Commands  
-#############################  
-
-touch : Create an empty file  
-cat   : Create a file and add data  
-cp    : Copy content from one file to another (cp t1.txt t2.txt)  
-vi    : Create and open a file for editing (vi t3.txt) 
-
-###########################  
-Reading File Data  
-###########################  
-
-cat   : Display file content from top to bottom  
-tac   : Display file content from bottom to top  
-head  : Show the first 10 lines of a file  
-tail  : Show the last 10 lines of a file  
-vi    : Open a file for viewing or editing  
-
-###############
-SED Command  
-###############  
-
-=> **SED** stands for **Stream Editor**  
-
-=> **SED** is used for text processing (substituting, deleting, printing, inserting).  
-
-=> It allows modifications to a file **without opening it**.  
-
-=> **SED** is a powerful command in Linux.  
-
-# **Substituting Text**  
-- Replace the **first occurrence** of "linux" with "unix"  
-  sed 's/linux/unix/' data.txt  
-
-- Replace the **second occurrence** of "linux" with "unix"  
-  sed 's/linux/unix/2' data.txt  
-
-- Replace the **third occurrence** of "linux" with "unix"  
-  sed 's/linux/unix/3' data.txt  
-
-- Replace **all occurrences** of "linux" with "unix"  
-  sed 's/linux/unix/g' data.txt  
-
-- Substitute and **save changes** in the original file  
-  sed -i 's/linux/unix/g' data.txt  
-
-# **Deleting Lines**  
-- Delete the **first line** of a file  
-  sed -i '1d' data.txt  
-
-- Delete the **fourth line** of a file  
-  sed -i '4d' data.txt  
-
-- Delete the **last line** of a file  
-  sed -i '$d' data.txt  
-
-- Delete data from **nth line to the last line**  
-  sed -i 'n,$d' data.txt  
-  *(Replace `n` with a line number)*  
-
-- Delete data from **5th line to 15th line**  
-  sed -i '5,15d' data.txt  
-
-# **Printing Specific Lines**  
-- Print data from **line number 10 to 20**  
-  sed -n '10,20p' data.txt  
-
-# **Inserting Text**  
-- Insert text at the **2nd line**  
-  sed '2i\I love India' data.txt  
-
-- Insert text at the **last line**  
-  sed '$a\I am from PSAIT' data.txt
-  
-#################  
-User Management  
-#################  
-
--> **Linux is a multi-user operating system.**  
-
--> Multiple users can access a single Linux machine and perform multitasking simultaneously.  
-
-**Note:** In Amazon Linux virtual machines (VMs), the default user is **"ec2-user"**, which has **sudo** privileges.  
-
--> A single Linux machine can have multiple user accounts.  
-
--> When a user account is created, a home directory is automatically assigned.  
-
-        admin   => /home/admin  
-        mike    => /home/mike  
-        stallin => /home/stallin 
-
-# **Create a new user**  
-  sudo useradd <username>  
-
-# **Set or update a user's password**  
-  sudo passwd <username>  
-
-# **Display all created users**  
-  cat /etc/passwd  
-
-# **Switch to another user account**  
-  su <username>  
-
-# **Navigate to the current user's home directory**  
-  cd ~  
-
-# **Delete a user account**  
-  sudo userdel <username>  
-
-# **Delete a user along with their home directory**  
-  sudo userdel --remove <username>  
-
-# **Change a username**  
-  sudo usermod -l <new-username> <old-username>  
-
-# **Important system files related to users:**  
-- `/etc/passwd` → Stores general user information.  
-- `/etc/shadow` → Stores encrypted passwords and security-related data.  
-
-##################################  
-Managing User Groups in Linux  
-##################################  
-
--> Groups allow administrators to assign permissions (read, write, execute) to multiple users at once instead of managing permissions for each user individually.
-Example: A development team can be assigned to a "developers" group with access to project files.
-
--> Instead of modifying each user’s access manually, administrators can add or remove users from a group to grant or revoke access.
-_____________________
-Example Scenario
-____________________
-Imagine a company with multiple departments:
-
-developers → Can access code repositories.
-designers → Can access design assets.
-finance → Can access financial reports.
-
-By assigning users to the right groups, the company can ensure that employees only access the files they need.
-
-
-
--> When a new user is created in Linux, a **default user group** with the same name is also created.  
-
-# **Display all groups in Linux**  
-  cat /etc/group  
-
-# **Create a new group**  
-  sudo groupadd <group-name>  
-
-# **Add a user to a group**  
-  sudo usermod -aG <group-name> <username>  
-
-# **Remove a user from a group**  
-  sudo gpasswd -d <username> <group-name>  
-
-# **List all users in a specific group**  
-  getent group <group-name>  
-
-# **Check which groups a user belongs to**  
-  id <username>  
-
-# **Delete a group**  
-  sudo groupdel <group-name>  
-
-# **Rename a group**  
-  sudo groupmod -n <new-group-name> <old-group-name>  
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Remaining Notes will be updated soon%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
